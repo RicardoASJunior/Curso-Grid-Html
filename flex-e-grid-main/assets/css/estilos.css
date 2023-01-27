@@ -200,7 +200,8 @@ body{
             "secao-videos secao-videos secao-videos"
             "produtos-recentes destaque-produtos destaque-produtos"
             "secao-produtos secao-produtos secao-produtos"
-        ;
+            ;
+        
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
@@ -231,6 +232,7 @@ body{
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 8px;
+    grid-template-rows: auto 1fr 1fr ;
 }
 
 .cartao__destaque{
@@ -260,10 +262,6 @@ body{
     margin-right: 8px;
 }
 
-.cartao__info--visualizacao::before{
-    content:"\e90f";
-    margin-right: 8px;
-}
 
 .cartao__info--moeda::before{
     content:"\e905";
@@ -286,6 +284,12 @@ body{
     content: "\e90b";
     font-size: 24px;
 }
+
+.cartao__botao--localizacao::before{
+    content: "\e908";
+    font-size: 24px;
+}
+
 
 .cartao__botao--carrinho::before{
     content: "\e901";
@@ -411,4 +415,159 @@ body{
     
 }
 
+/*css Picos*/
+
+.cartao__info--visualizacao::before{
+    content:"\e90f";
+    margin-right: 8px;
+}
+
+/*Css Gap com Mureta da Voluntários*/
+.secao-gap{
+    display: none;
+}
+
+.titulo__texto--gap{
+    font-size: 32px;
+    font-weight: 600;
+    margin: 16px 16px;
+}
+
+.perfil-gap{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+    "cabecalho__perfil--gap cartao__info-gap"
+    ;
+}
+
+.cabecalho__perfil--gap{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 8px;
+    align-items: center;
+    justify-self: flex-start;
+    color: #95999C;
+    padding: 8px 16px;
+}
+
+.cabecalho__perfil--gap::before{
+    content: "";
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/profile_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartao__info-gap{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 4px;
+    align-items: center;
+    justify-self: flex-start;
+    color: #95999C;
+    padding: 8px 16px;
+}
+
+.cartao__info--visualizacao-gap::before{
+    content:"\e90f";
+    margin-right: 8px;
+}
+
+.texto-gap{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 16px;
+}
+
+.destaque-gap{
+    width: 100%;
+}
+
+.destaque-gap-2{
+    width: 100%;
+    
+}
+
+.destaque-3{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.destaque-gap-4{
+    width: 100%;
+    
+}
+
+.destaque-gap-5{
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 1440px){
+    .secao-gap{
+        display: grid;
+        grid-area: secao-gap;
+    }
+    
+    .destaque-3{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .destaque-gap-4{
+        width: 50%;
+        padding: 8px;
+    }
+    
+    .destaque-gap-5{
+        width: 50%;
+        padding: 8px;
+    }
+    
+
+    .cartao-gap{
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #2C343A;
+
+        margin: 16px;
+    }
+    .area-texto-gap{
+        grid-area: area-texto-gap;
+    }
+    .titulo-gap{
+        font-size: 1.2em;
+        font-weight: 700;
+        padding-left: 16px;
+    }    
+
+    .principal-gap{
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        grid-template-areas: 
+            "info_texto-gap secao-gap"   
+            
+           
+        ;
+        column-gap: 16px;
+        padding: 16px 60px;
+        grid-column: 2;
+    }
+
+    .info_texto-gap{
+        grid-area: info_texto-gap;
+        
+    }
+
+}
 
