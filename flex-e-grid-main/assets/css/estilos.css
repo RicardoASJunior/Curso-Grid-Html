@@ -501,12 +501,14 @@ body{
 }
 
 .destaque-gap-4{
-    width: 100%;
+    width: 94%;
+    padding: 8px;
     
 }
 
 .destaque-gap-5{
-    width: 100%;
+    width: 94%;
+    padding: 8px;
 }
 
 
@@ -524,12 +526,12 @@ body{
     }
 
     .destaque-gap-4{
-        width: 50%;
+        width: 47%;
         padding: 8px;
     }
     
     .destaque-gap-5{
-        width: 50%;
+        width: 47%;
         padding: 8px;
     }
     
